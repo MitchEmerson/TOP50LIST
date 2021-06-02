@@ -33,7 +33,7 @@ than one of Mitch's individual movie list items, they can challenge that movie w
 
 ## Wireframes and User Flow Images (Used in planning)
 
-<img src="./public/images/erd.png" width ="250" height ="165" /> 
+<img src="./public/images/user-flow.png" width ="250" height ="165" /> 
 
 <img src="./public/images/wireframe_comments.png" width ="250" height ="165" /> 
 
