@@ -13,7 +13,7 @@ const movies = [
     },
     {
         name:'Fargo',
-        year: 1995,
+        year: 1996,
         goodMovie: true
     }
 ];
