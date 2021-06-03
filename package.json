@@ -1,0 +1,22 @@
+{
+  "name": "top50list",
+  "version": "1.0.0",
+  "description": "A top 50 movielist created by Mitch",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MitchEmerson/TOP50LIST.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MitchEmerson/TOP50LIST/issues"
+  },
+  "homepage": "https://github.com/MitchEmerson/TOP50LIST#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
