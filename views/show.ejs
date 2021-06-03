@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Movies show page</h1>
+         <%= oneMovie.name %> came out on <%= oneMovie.year %>.
+        <% if(oneMovie.goodMovie === true){ %>
+            It is goood
+        <% } else { %>
+            It SUCKS
+        <% } %>
+    </body>
+</html>
