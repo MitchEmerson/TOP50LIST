@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/MitchEmerson/TOP50LIST#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "method-override": "^3.0.0"
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.13"
   }
 }
