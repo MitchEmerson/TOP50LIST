@@ -25,7 +25,7 @@ app.use(express.static(__dirname + "/public"));
 //Controllers
 app.use("/user", controllers.userRoute)
 //app.use("/movies", controllers.movieRoute);
-app.use("/comments", controllers.commentRoute);
+app.use("/comment", controllers.commentRoute);
 
 // Homepage
 app.get("/", function (req, res) {
