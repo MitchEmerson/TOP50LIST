@@ -6,7 +6,8 @@ const movieSchema = new mongoose.Schema(
     {
         title: {type: String},
         director: {type: String},
-        movieReviews: [{body: String}],
+        writer: {type: String},
+        actors: [{type: String}],
         imgUrl: [{type: String}],
         challenged: {type: Boolean, default: false},
         
