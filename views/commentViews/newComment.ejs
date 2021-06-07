@@ -12,25 +12,12 @@
     <title>New Comment Page</title>
 </head>
 <body>
+    <h1>New Comment Page</h1>
+    <a href="/">Home</a>
+    <a href="/comments/edit"><h2>Edit a Comment</h2>
     <div>
         <form action="/comments" method="POST">
-            <input type="text" name="name" placeholder="Comment">
-            
-            <select name="titles">
-                <option value="" disabled selected>Select a Movie</option>
-               <% movies.forEach( movie => { %>
-
-                <option value="<%= movie._id%>">
-                    <%= movie.title %>
-                </option>
-          <% }); %>
-            </select><br><br>
-            <h3 class="info">Actor Photos</h3>
-           
-            <input type="text" name="imgUrl"  placeholder="URL's ONLY"><br><br>
-        <input type="submit" value="Submit"><br><br>
-        <a class="a" id="class-a" href='/actors'>Go Back</a>
-        </form><br>
+         
 
 
     </div>

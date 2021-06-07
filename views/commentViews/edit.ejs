@@ -8,17 +8,8 @@
         <h1>EDIT COMMENT PAGE</h1>
         <!-- Add action and method attributes to form tag -->
         <!-- Make sure the action uses the _method query parameter that method-override is looking for -->
-        <form action="/movies/<%= index %>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%= oneMovie.name %>"/><br/>
-            Color: <input type="text" name="color" value="<%= oneMovie.color %>"/><br/>
-            Is Ready To Eat:
-            <input type="checkbox" name="goodMovie"
-                <% if(oneMovie.goodMovie === true){ %>
-                    checked
-                <% } %>
-            />
-            <br/>
-            <input type="submit" value="Submit Changes"/>
+        <form action="/comments/<%= index %>?_method=PUT" method="POST">
+           
         </form>
     </body>
 </html>
