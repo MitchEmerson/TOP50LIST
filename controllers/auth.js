@@ -11,7 +11,7 @@ router.get('/register', function(req,res) {
 
 router.post('/register', async function(req,res) {
     try {
-    const foundUser = await db.User.findOne({password: req.body.password});
+        const foundUser = await db.User.findOne({password: req.body.password});
     if(foundUser){
         return res.redirect("/login");
     }
@@ -28,19 +28,28 @@ router.post('/register', async function(req,res) {
 
 });
 
-router.post('/login', function(req,res) {
-    res.render('auth/register')
+router.get('/login', function(req,res) {
+    
+    res.render('auth/login')
 });
 
-router.post('/login',function(req,res){
+router.post('/login', async function(req,res){
+    try {
+        const foundUser = await db.User.findOne({password: req.body.password});
+        
+        const match = await bcrypt.compare(req.body.password, foundUser.password);
 
-});
+        if(!match) return res.send("password is incorrect");
 
-
-
-
-
-
-
+        req.session.currentUser = {
+            id: foundUser._id,
+            username: foundUser.username
+        }
+        return res.redirect("/");
+        
+        }catch(err) {
+        console.log(err);
+        res.send(err);
+ }});
 
 module.exports = router;

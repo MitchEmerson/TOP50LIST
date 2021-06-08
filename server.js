@@ -40,6 +40,15 @@ app.use(function(req,res,next) {
     next();
 });
 
+app.use(function(req,res,next){
+    app.locals.user = req.session.currentUser;
+    next();
+})
+// Homepage
+app.get("/", function (req, res) {
+    res.render("home", context)
+}),
+
 //Controllers
 app.use("/", controllers.auth);
 app.use("/user", controllers.userRoute);
@@ -48,7 +57,8 @@ app.use("/comment", controllers.commentRoute);
 
 // Homepage
 app.get("/", function (req, res) {
-    res.render("home")
+    const context = {user: req.session.currentUser}
+    res.render("home", context)
 }),
 
 
