@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 const dbURL = process.env.MONGODB_URI;
+//const dbUrl = "mongodb://localhost:27017/TOP50LIST"
 
 mongoose.connect(dbURL, {
     useNewUrlParser: true,
