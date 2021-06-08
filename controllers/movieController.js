@@ -2,6 +2,8 @@ const express = require("express");
 // set up router
 const router = express.Router();
 
+const db = require('../models')
+
 
 const movie = require("../models/Movie.js");
 

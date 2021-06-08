@@ -6,10 +6,8 @@ const userSchema = new mongoose.Schema({
 
     username: {type: String, lowercase: true, unique: true, required: [true, "can't be blank"], match: [/^[a-zA-Z0-9]+$/, 'is invalid'], index: true},
     
-    password: { type: String, required: true },
-    profile: {
-        userName: String,
-    },
+    password: { type: String, required: [true, "Please Provide A Password."], unique: true },
+  
     active: {type: Boolean, default: true}
         
 },{

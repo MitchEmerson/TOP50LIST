@@ -41,7 +41,8 @@ app.use(function(req,res,next) {
 });
 
 //Controllers
-app.use("/user", controllers.userRoute)
+app.use("/", controllers.auth);
+app.use("/user", controllers.userRoute);
 app.use("/movie", controllers.movieRoute);
 app.use("/comment", controllers.commentRoute);
 
