@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + "/public"));
 app.use(session({
-    store: MongoStore.create({ mongoUrl: "process.env.MONGODB_URI"}),
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI}),
         //const dbUrl = "mongodb://localhost:27017/TOP50LIST"})
     secret: "This is secret",
     resave: false,
@@ -35,10 +35,10 @@ app.use(session({
 }));
 
 //logger middleware (tracking)
-app.use(function(req,res,next) {
-    console.log(`${req.method} - ${req.url}`);
-    next();
-});
+//app.use(function(req,res,next) {
+    //console.log(`${req.method} - ${req.url}`);
+    //next();
+//});
 
 app.use(function(req,res,next){
     app.locals.user = req.session.currentUser;
@@ -46,7 +46,7 @@ app.use(function(req,res,next){
 })
 // Homepage
 app.get("/", function (req, res) {
-    res.render("home", context)
+    res.render("home")
 }),
 
 //Controllers

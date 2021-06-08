@@ -74,3 +74,31 @@ body {
 h3 {
     margin-left: 45%;
 }
+
+.yella {
+    color: #ffc300;
+}
+
+.container {
+    color: #ffc300;
+}
+
+.red {
+    color: whitesmoke;
+}
+
+#username {
+    color: black;
+}
+
+#password {
+    color: black;
+}
+
+#button {
+    background-color:  #ffc300;
+    border-radius: 5px;
+    height: 30px;
+}
+
+

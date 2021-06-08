@@ -1,37 +1,29 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-const dbURL = process.env.MONGODB_URI;
+const dbUrl = process.env.MONGO_URI;
 //const dbUrl = "mongodb://localhost:27017/TOP50LIST"
 
-mongoose.connect(dbURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
- });
- mongoose.connection.on("disconnected", function(){
-     console.log("Mongodb disconnected");
- });
- mongoose.connection.on("connected", function(){
-     console.log("Mongodb connected");
- });
- mongoose.connection.on("error", function(err){
-     console.log("Mongodb error: ", err);
- });
+mongoose
+	.connect(dbUrl, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useCreateIndex: true,
+		useFindAndModify: false,
+	})
+	.then(function () {
+		console.log("MongoDB connected! :)");
+	})
+	.catch(function (err) {
+		console.log("MongoDB error :(");
+		console.log(err);
+	});
+
+mongoose.connection.on("disconnected", function () {
+	console.log("MongoDB disconnected :(");
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
- module.exports = {
+    module.exports = {
     User: require("./User"),
     Movie: require("./Movie"),
     Comment: require("./Comment")

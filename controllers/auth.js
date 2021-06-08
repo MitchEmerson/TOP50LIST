@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("bcryptjs")
 
-const db = require('../models')
+//const db = require('../models')
 
 router.get('/register', function(req,res) {
     res.render('auth/register')
