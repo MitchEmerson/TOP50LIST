@@ -1,13 +1,18 @@
 const express = require("express");
 // set up router
 const router = express.Router();
-const db = require("bcryptjs")
+const bcrypt = require("bcryptjs");
+const db = require("../models");
 
 //const db = require('../models')
 
-router.get('/register', function(req,res) {
-    res.render('auth/register')
-});
+//router.get('/register', function(req,res) {
+   // res.render('/auth/register.ejs')
+//});
+
+router.get("/register", function (req, res) {
+    res.render("auth/register");
+  });
 
 router.post('/register', async function(req,res) {
     try {

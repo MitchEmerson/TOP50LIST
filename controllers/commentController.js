@@ -2,8 +2,9 @@ const express = require("express");
 // set up router
 const router = express.Router();
 
+const db = require('../models')
 
-const comment = require("../models/Comment.js");
+//const comment = require("../models/Comment.js");
 
 
 router.get('/showComment', (req,res) => {

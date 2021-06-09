@@ -54,7 +54,7 @@ app.use("/", controllers.auth);
 app.use("/user", controllers.userRoute);
 app.use("/movie", controllers.movieRoute);
 app.use("/comment", controllers.commentRoute);
-
+//app.use("/auth", controllers.authRoute);
 // Homepage
 app.get("/", function (req, res) {
     const context = {user: req.session.currentUser}
