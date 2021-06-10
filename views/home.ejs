@@ -10,32 +10,36 @@
 <body>
     <header id="header" class="glow"> 
         <h1 class="title">Mitch's TOP 10 Movies</h1>
-        <h4>Welcome to the Top 10!!</h4>
-        <% if (user) { %>
-          <h4><%= user.username %></h4>
-        <% } else { %> 
-          <a href="/login" id="login-sing_up">login/sing up</a>   
-     <% } %>
+        <div id="welcome">
+            <h4>Welcome to the Top 10!!</h4>
+            <% if (user) { %>
+              <h4><%= user.username %></h4>
+                <% } else { %> 
+              <a id="log-sin" href="/login" id="login-sing_up">login/sing up</a>   
+            <% } %>
+            <div id="log-mov">
+                <form action="/logout?_method=DELETE" method="POST">
+                <input type="submit" value="LOGOUT">
+                </form>
+              
+              <a id="mov-tag" href="movie" id="movie-page">visit movie page</a>
+            </div>
+          </div>
+        </header>
           
       </header>
-      <form action="/logout?_method=DELETE" method="POST">
-        <input type="submit" value="LOGOUT">
-    </form>
-      <div>
-          <a href="movie" id="movie-page">visit movie page</a>
-      </div>
       
       <ol class="list-items">
-          <li>Apocalypse Now!<a href="/comments">comments</a></li>
-          <li>Goodfellas<a href="/comments">comments</a></li>
-          <li>Mannequin<a href="/comments">comments</a></li>
-          <li>Shawshank Redemption<a href="/comments">comments</a></li>
-          <li>The Godfather<a href="/comments">comments</a></li>
-          <li>The Goonies<a href="/comments">comments</a></li>
-          <li>The Matrix<a href="/comments">comments</a></li>
-          <li>The Wizard of Oz<a href="/comments">comments</a></li>
-          <li>Weird Science<a href="/comments">comments</a></li>
-          <li>While You Were Sleeping<a href="/comments">comments</a></li>
+          <li>Apocalypse Now!
+          <li>Goodfellas
+          <li>Mannequin
+          <li>Shawshank Redemption
+          <li>The Godfather
+          <li>The Goonies
+          <li>The Matrix
+          <li>The Wizard of Oz
+          <li>Weird Science
+          <li>While You Were Sleeping
 
       </ol>
 </body>

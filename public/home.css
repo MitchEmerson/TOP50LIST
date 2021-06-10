@@ -63,8 +63,23 @@ body {
         0 0 27px #ffc300,
         0 0 30px#ffc300,
         0 0 51px #ffc300;
-    margin-left: 83%;
+    
     font-size: smaller;
+  }
+
+  #log-mov {
+      margin-left: 70%;
+      margin-top: -15%;
+  }
+
+  #mov-tag {
+      font-size:smaller;
+      color:#ffc300;
+  }
+
+  #log-sin {
+      font-size: smaller;
+      color: #ffc300; 
   }
 
   #movie-list {
@@ -85,3 +100,10 @@ h3 {
     padding: 10px;
     margin-left: 20px;
 }
+
+#welcome {
+    margin: auto;
+    width: 50%;
+}
+
+

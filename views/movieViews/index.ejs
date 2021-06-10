@@ -6,12 +6,16 @@
         <title></title>
     </head>
     <body>
-        <h1>MITCH'S TOP 10 MOVIES</h1>
-        <% for(let i=0; i<movies.length; i++){ %> 
-        <h2><a id="yella" href="movie/<%=i%>">Title:<%= movies[i].title %></a></h2>
-        <p>Director:<%= movies[i].director %></p> 
-        <p>Writer:<%= movies[i].writer %></p> 
-        <p>Actors:<%= movies[i].actors %></p>
+        <div id="content">
+            <h1>MITCH'S TOP 10 MOVIES</h1>
+            <a id="back-btn" href = "/">Back</a> 
+            <% for(let i=0; i<movies.length; i++){ %> 
+            <h2><a id="yella" href="movie/<%=i%>">Title:<%= movies[i].title %></a></h2>
+            <p>Director:<%= movies[i].director %></p> 
+            <p>Writer:<%= movies[i].writer %></p> 
+            <p>Actors:<%= movies[i].actors %></p>
         <%   }%>
+        </div>
     </body>
-</html>
+</html>      
+       

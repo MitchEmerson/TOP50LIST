@@ -12,9 +12,10 @@
             <p>Director:<%= movie.director %></p> 
             <p>Writer:<%= movie.writer %></p> 
             <p>Actors:<%= movie.actors %></p>
+            <h2>Comments</h2>
         <ul>
             <% comments.forEach(function (comment) { %>
-             <a href="/comment/<%=comment._id%>"><li><%= comment.comment %></li></a>  
+             <a href="/comment/<%=comment._id%>"><li class="li"><%= comment.comment %></li></a>  
             <% }) %>
         </ul>
         <h2>Leave A Comment</h2>
@@ -23,7 +24,8 @@
             <textarea id="comments" name="comment" rows="4" cols="50" placeholder="Leave a comment..."></textarea>
             <button type="submit" id="submit">Submit</button>
         </form>
-        <a href="/edit">Edit</a>
+            <a id="back-btn" href = "/movie">Back</a>
+        
         <img id="poster" src="<%=movie.imgUrl%>">
 
     </body>

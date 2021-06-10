@@ -6,15 +6,20 @@ body {
 
 
 #poster {
-    max-height: 435px;
-    max-width: 328px;
+    max-height: 735px;
+    max-width: 428px;
     display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  margin-top: -15%;
+  margin-top: -25%;
 }
 
 .li {
     color: whitesmoke;
+}
+
+#back-btn {
+    color:#ffc300;
+    font-size: x-large;
 }

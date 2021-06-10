@@ -7,3 +7,14 @@ body {
     color: #ffc300;
 
 }
+
+#content {
+    margin-left: 40px;
+}
+
+#back-btn {
+    color:#ffc300;
+    font-size: x-large;
+    margin-left: 95%;
+    margin-top: -25px;
+}

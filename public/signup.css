@@ -26,11 +26,11 @@ body {
     font-size: 30px;
 }
 
-.title {
+#title {
     font-family: "Vibur", sans-serif;
-    margin: auto;
-    width: 50%;
-    padding: 10px;
+    margin-left: 500px;
+    
+    
 }
 
 #signup-login  {
@@ -99,6 +99,10 @@ h3 {
     background-color:  #ffc300;
     border-radius: 5px;
     height: 30px;
+}
+
+#register {
+    color:#ffc300;
 }
 
 
