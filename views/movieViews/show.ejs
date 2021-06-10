@@ -14,7 +14,7 @@
             <p>Actors:<%= movie.actors %></p>
         <ul>
             <% comments.forEach(function (comment) { %>
-             <li class="li"><%= comment.comment %></li>   
+             <a href="/comment/<%=comment._id%>"><li><%= comment.comment %></li></a>  
             <% }) %>
         </ul>
         <h2>Leave A Comment</h2>
@@ -23,6 +23,7 @@
             <textarea id="comments" name="comment" rows="4" cols="50" placeholder="Leave a comment..."></textarea>
             <button type="submit" id="submit">Submit</button>
         </form>
+        <a href="/edit">Edit</a>
         <img id="poster" src="<%=movie.imgUrl%>">
 
     </body>
