@@ -20,28 +20,11 @@ than one of Mitch's individual movie list items, they can challenge that movie w
 
 <img src="./public/images/top50_comments.png" width ="250" height ="165" />
 
-## Description
-The MITCH'S TOP 50 LIST, is a website with...you guessed it, Mitch's top 50 favorite movies.  If a user believes they have a better movie 
-than one of Mitch's individual movie list items, they can challenge that movie with another movie.
 
- 1) As a user I want to see Mitch's movie list (READ)
- 2) As a user I want to be able to leave a comment about a movie (CREATE)
- 3) As a user I want to be able to challenge a movie (UPDATE)
- 5) As a user I want to be able to edit comments/posts (UPDATE)
- 6) As a user I want to be able to delete a comment I made. (DELETE)
-
-
-## Wireframes and User Flow Images (Used in planning)
-
-<img src="./public/images/user-flow.png" width ="250" height ="165" /> 
-
-<img src="./public/images/wireframe_comments.png" width ="250" height ="165" /> 
-
-<img src="./public/images/wireframe_movies.png" width ="250" height ="165" />
 
 ## 2 Models
 -Users
--Movielist
+-Comments
 
 ## Configuration(Dependencies)
 
