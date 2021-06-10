@@ -4,8 +4,9 @@ const Movie = require("../models/Movie.js")
 
 const commentSchema = new mongoose.Schema(
     {
-          
-        comments: [{type: mongoose.Schema.Types.ObjectId, ref: "Comment", unique: true}, ]
+        movieIndex: mongoose.Schema.Types.Number,
+        userId: mongoose.Schema.Types.ObjectId, 
+        comment: mongoose.Schema.Types.String, 
     },
     {
         timestamps: true,

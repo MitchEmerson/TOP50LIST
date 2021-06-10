@@ -34,6 +34,14 @@ app.use(session({
     }
 }));
 
+//Auth Required middleware
+const authRequired = function(req, res, next) {
+    if(req.session.currentUser) {
+        return next();
+    }
+    return res.redirect('/login');
+};
+
 //logger middleware (tracking)
 //app.use(function(req,res,next) {
     //console.log(`${req.method} - ${req.url}`);
@@ -52,14 +60,19 @@ app.get("/", function (req, res) {
 //Controllers
 app.use("/", controllers.auth);
 app.use("/user", controllers.userRoute);
-app.use("/movie", controllers.movieRoute);
-app.use("/comment", controllers.commentRoute);
+app.use("/movie", authRequired, controllers.movieRoute);
+app.use("/comment", authRequired, controllers.commentRoute);
 //app.use("/auth", controllers.authRoute);
 // Homepage
 app.get("/", function (req, res) {
     const context = {user: req.session.currentUser}
     res.render("home", context)
 }),
+
+
+
+
+
 
 
 // Server Bind

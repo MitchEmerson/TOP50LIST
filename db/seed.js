@@ -1,4 +1,4 @@
-const { now } = require("mongoose");
+
 const db = require("../models");
 
 const movies = [ {
@@ -7,7 +7,7 @@ const movies = [ {
     director: "Francis Ford Copolla",
     writer: "Francis Ford Copolla ",
     actors: ["Michael Sheen", "Marlon Brando", "Robert Duvall"],
-    imgUrl: [{imgUrl: "https://picfiles.alphacoders.com/376/thumb-376906.jpg"}],  
+    imgUrl: "https://www.themoviedb.org/t/p/original/7qm2eOuOaR7mpjpIciQu1dLlnWV.jpg",  
 },
 {
   title: "Goodfellas",
@@ -72,7 +72,7 @@ const movies = [ {
   director: "John Turtletaub",
   writer: "Frederic Lebow",
   actors: "Bill Pullman, Sandra Bullock, Peter Gallagher",
-  imgUrl: "https://lh3.googleusercontent.com/proxy/oykJEhb1CAUZBc0cHV-tbm2Ap9_hm_7MlmsXk-t1syHpkwQRMeivJnzdARU-mbMgb9fLmO_EllJARyUqLMV9oRD7Sa-HkX-1gBNeaaTEqnk0_s9KUHTWFEAtnLySdjOdiG4",
+  imgUrl: "https://lh3.googleusercontent.com/proxy/ceq-LENmgSQXq0JOfPNtb2iyzCGVNYmxobvZcasQJlZjsrJSVETP8MuBFjzCTaIumrF9yZOQ8Tskx4R3W1a4PX14lYFvc-7mH96xt3wCH5_k0qj3ZiUZN9zu_8_C",
 },
 ];
 
@@ -106,7 +106,7 @@ const movies = [ {
   }
 };
 */
-run();
+module.exports = movies;
 
         
         

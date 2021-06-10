@@ -10,15 +10,21 @@
 <body>
     <header id="header" class="glow"> 
         <h1 class="title">Mitch's TOP 10 Movies</h1>
-        
-        <a href="/user/sign-up-in" id="login-sing_up">login/sing up</a> 
-        <h3 class="tiny-headers">What are your favorites?</h3>
+        <h4>Welcome to the Top 10!!</h4>
+        <% if (user) { %>
+          <h4><%= user.username %></h4>
+        <% } else { %> 
+          <a href="/login" id="login-sing_up">login/sing up</a>   
+     <% } %>
           
       </header>
+      <form action="/logout?_method=DELETE" method="POST">
+        <input type="submit" value="LOGOUT">
+    </form>
       <div>
-          <a href="movie/movie" id="movie-page">visit movie page</a>
-          <a href="/newComment" id="movie-page">Make a comment</a>
+          <a href="movie" id="movie-page">visit movie page</a>
       </div>
+      
       <ol class="list-items">
           <li>Apocalypse Now!<a href="/comments">comments</a></li>
           <li>Goodfellas<a href="/comments">comments</a></li>

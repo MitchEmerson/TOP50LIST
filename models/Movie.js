@@ -9,7 +9,6 @@ const movieSchema = new mongoose.Schema(
         writer: {type: String},
         actors: [{type: String}],
         imgUrl: [{type: String}],
-        challenged: {type: Boolean, default: false},
         
         
         comments: [{type: mongoose.Schema.Types.ObjectId, ref: "Comment", unique: true}, ]
@@ -20,7 +19,6 @@ const movieSchema = new mongoose.Schema(
 )
 
 const Movie = mongoose.model("Movie", movieSchema);
-
 
 
 
